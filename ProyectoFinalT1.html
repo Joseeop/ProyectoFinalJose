@@ -1,0 +1,82 @@
+<html>
+
+<head>
+
+    <title>Proyecto Jose LMT1</title> 
+    <style>
+        /*
+        Contenedor con picture y todas las fotos y sus formatos(heic,webp y jpg) y dimensiones indicadas.
+        */
+        #portaFoto {
+            width: 50vw;
+            height: 50vh;
+            display: block;
+        }
+        /*
+        
+        */
+        #Foto {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #PictureCont {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        @media screen and (orientation:landscape) {
+            #portaFoto {
+                max-width: 1200px;
+                max-height: 800px;
+            }
+        }
+
+        @media screen and (orientation:portrait) {
+            #portaFoto {
+                max-width: 600px;
+                max-height: 900px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="PictureCont">
+        <picture id="portaFoto">
+            <source media="(orientation: landscape) and (min-width: 1920px)" srcset="./foto1H.heic"
+                    type="image/heic">
+                <source media="(orientation: landscape) and (min-width: 1920px)" srcset="./foto1H.webp"
+                    type="image/webp">
+                <source media="(orientation: landscape) and (min-width: 1920px)" srcset="./foto1H.jpg" type="image/jpeg">
+                <source media="(orientation: portrait) and (min-width:1200px)" srcset="./foto1V.heic" type="image/heic">
+                <source media="(orientation: portrait) and (min-width:1200px)" srcset="./foto1V.webp" type="image/webp">
+                <source media="(orientation: portrait) and (min-width:1200px)" srcset="./foto1V.jpg" type="image/jpg">
+        
+               
+                <source media="(orientation: landscape) and (min-width: 800px)" srcset="./foto2H.heic"
+                    type="image/heic">
+                <source media="(orientation: landscape) and (min-width: 800px)" srcset="./foto2H.webp"
+                    type="image/webp">
+                <source media="(orientation: landscape) and (min-width: 800px)" srcset="./foto2H.jpg" type="image/jpeg">
+                <source media="(orientation: portrait) and (min-width: 600px)" srcset="./foto2V.heic" type="image/heic">
+                <source media="(orientation: portrait) and (min-width: 600px)" srcset="./foto2V.webp" type="image/webp">
+                <source media="(orientation: portrait) and (min-width: 600px)" srcset="./foto2V.jpg" type="image/jpg">
+                
+        
+         
+        
+                <img id="Foto" alt="Fotos de animales" title="Wild" src="./foto1H.jpg" />
+        </picture>
+    </div>
+
+</body>
+
+
+</html>
